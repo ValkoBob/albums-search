@@ -1,6 +1,7 @@
 import React from 'react';
 
-const DataListItem = ({ artist, image, album }) => {
+const DataListItem = ({ album, artist, image, release }) => {
+  console.log(image);
   return (
       <div className="data-list-item">
         <div className="data-cover">

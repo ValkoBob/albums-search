@@ -9,15 +9,19 @@ import ContentItem from './content-bar-item';
 import ErrorIndicator from './error-indicator';
 
 
-const DataList = ({ data}) => {
+const DataList = ({data}) => {
   return (
       <ul className="data-list">
         {
-          data.map((item) => {
+          data.map((item, index) => {
+            const {album, artist, image, release} = item;
             return (
-                <li key={item.id}>
+                <li key={index}>
                   <ContentItem
-                      item={item}
+                      album = {album}
+                      artist = {artist}
+                      image = {image}
+                      release = {release}
                   />
                 </li>
             );
@@ -41,6 +45,7 @@ class DataListContainer extends Component {
     }
 
     if (error) {
+      console.log(error);
       return <ErrorIndicator />;
     }
 
