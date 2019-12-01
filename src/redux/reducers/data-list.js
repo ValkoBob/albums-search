@@ -1,11 +1,12 @@
-import { FETCH_DATA_REQUESTED, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE } from "../constants/action-types";
+import {FETCH_DATA_REQUESTED, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE} from "../constants/action-types";
 
 const dataList = (state, action) => {
 
   if (state === undefined) {
     return {
+      query: '',
       data: [],
-      loading: true,
+      loading: false,
       error: null
     };
   }
@@ -13,6 +14,7 @@ const dataList = (state, action) => {
   switch (action.type) {
     case FETCH_DATA_REQUESTED:
       return {
+        query: '',
         data: [],
         loading: true,
         error: null
@@ -20,6 +22,7 @@ const dataList = (state, action) => {
 
     case FETCH_DATA_SUCCESS:
       return {
+        query: action.query,
         data: action.payload,
         loading: false,
         error: null
@@ -27,6 +30,7 @@ const dataList = (state, action) => {
 
     case FETCH_DATA_FAILURE:
       return {
+        query: action.query,
         data: [],
         loading: false,
         error: action.payload

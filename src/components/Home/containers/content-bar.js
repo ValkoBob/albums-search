@@ -1,67 +1,54 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-
-import { fetchData } from '../../../redux/actions';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 import Spinner from './spinner';
 import ContentItem from './content-bar-item';
 import ErrorIndicator from './error-indicator';
 
+import './scss/data-list.scss'
+
 
 const DataList = ({data}) => {
   return (
-      <ul className="data-list">
+      <div className="wrapper">
         {
           data.map((item, index) => {
             const {album, artist, image, release} = item;
             return (
-                <li key={index}>
+                <div className="box" key={index}>
                   <ContentItem
-                      album = {album}
-                      artist = {artist}
-                      image = {image}
-                      release = {release}
+                      album={album}
+                      artist={artist}
+                      image={image}
+                      release={release}
                   />
-                </li>
+                </div>
             );
           })
         }
-      </ul>
+      </div>
   );
 };
 
 class DataListContainer extends Component {
 
-  componentDidMount() {
-    this.props.fetchData();
-  }
-
   render() {
-    const { data, loading, error} = this.props;
+    const {data, loading, error, query} = this.props;
 
     if (loading) {
-      return <Spinner />;
+      return <Spinner/>;
     }
 
     if (error) {
-      console.log(error);
-      return <ErrorIndicator />;
+      return <ErrorIndicator query={query}/>;
     }
-
-    return <DataList data={data} />;
+    return <DataList data={data}/>;
   }
 }
 
-const mapStateToProps = ({ dataList: { data, loading, error }}) => {
-  return { data, loading, error };
+const mapStateToProps = ({dataList: {data, loading, error, query}}) => {
+  return {data, loading, error, query};
 };
 
-const mapDispatchToProps = (dispatch, { apiService }) => {
-  return bindActionCreators({
-    fetchData: fetchData(apiService)
-  }, dispatch);
-};
 
-export default
-    connect(mapStateToProps, mapDispatchToProps)(DataListContainer);
+export default connect(mapStateToProps)(DataListContainer);

@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
 import dataList from './data-list';
 
 
-export default combineReducers({ dataList });
+export default combineReducers({dataList});

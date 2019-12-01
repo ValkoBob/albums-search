@@ -1,6 +1,6 @@
-import { FETCH_DATA_REQUESTED, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE } from "../constants/action-types";
+import {FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE, FETCH_DATA_REQUESTED} from "../constants/action-types";
 
-const dataRequested = () => {
+export const dataRequested = () => {
   return {
     type: FETCH_DATA_REQUESTED
   };
@@ -13,32 +13,54 @@ const dataLoaded = (newData) => {
   };
 };
 
-const dataError = (error) => {
+const dataError = (error, query) => {
   return {
     type: FETCH_DATA_FAILURE,
-    payload: error
+    payload: error,
+    query
   };
 };
 
-const fetchData= () => () => (dispatch) => {
-  fetch('https://itunes.apple.com/search?term=eminem')
-      .then(response => response.json())
-      .then((res) => {
-        const {results} = res;
-        return results.map((item) => {
-          return {
-            artist: item.artistName,
-            image: item.artworkUrl100,
-            album: item.trackName,
-            release: item.releaseDate
-          }
-        })
-      })
-      .then((data) => dispatch(dataLoaded(data)))
-      .catch((err) => dispatch(dataError(err)));
-};
 
-export {
-  fetchData
-};
+const URL_ITUNES = 'https://itunes.apple.com/search?term=';
+const URL_DEEZER = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=';
+
+export function fetchData(query) {
+  return function (dispatch) {
+    let firstAPICall = fetch(`${URL_ITUNES}${query}`);
+    let secondAPICall = fetch(`${URL_DEEZER}${query}`);
+
+    Promise.all([firstAPICall, secondAPICall])
+        .then(values => Promise.all(values.map(value => value.json())))
+        .then(finalVals => {
+          let firstAPIResp = finalVals[0];
+          let secondAPIResp = finalVals[1];
+          const {results} = firstAPIResp;
+          const {data} = secondAPIResp;
+          const resultFromITunes = results.map((item) => {
+            return {
+              artist: item.artistName,
+              image: item.artworkUrl100,
+              album: item.trackName,
+            }
+          });
+          const resultFromDeezer = data.map((item) => {
+            return {
+              artist: item.artist.name,
+              image: item.album.cover_small,
+              album: item.title,
+            }
+          });
+          return Array.from(new Set([...resultFromITunes, ...resultFromDeezer]));
+        })
+        .then((data) => {
+          if (data.length === 0) {
+            return dispatch(dataError('Error!', query))
+          }
+          return dispatch(dataLoaded(data))
+        })
+        .catch((err) => dispatch(dataError(err)));
+  }
+}
+
 
