@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ErrorIndicator = ({query}) => {
+const ErrorIndicator = () => {
   return (<div>
-    <h2>No results for {query}</h2>
+    <h2>No results </h2>
     <h4>Try checking your spelling or use more general terms</h4>
   </div>);
 };

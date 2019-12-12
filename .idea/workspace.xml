@@ -1,11 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dbd8cf5c-b013-4c1a-82e4-c893eece774e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/containers/content-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/containers/content-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/containers/error-indicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/containers/error-indicator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/containers/search-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/containers/search-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/constants/action-types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/data-list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store/index.js" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1UCgXTMZR9EtmKzEaFn1tXBkPNQ" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Valko\IdeaProjects\albums-search\src\components\Home\containers" />
+      <recent name="C:\Users\Valko\IdeaProjects\albums-search\src" />
+      <recent name="C:\Users\Valko\IdeaProjects\albums-search\src\redux\store" />
+      <recent name="C:\Users\Valko\IdeaProjects\albums-search\src\redux\constants" />
+      <recent name="C:\Users\Valko\IdeaProjects\albums-search\src\components\api-sevice-context" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dbd8cf5c-b013-4c1a-82e4-c893eece774e" name="Default Changelist" comment="" />
+      <created>1574866030980</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574866030980</updated>
+      <workItem from="1574866190076" duration="560000" />
+      <workItem from="1574948024126" duration="6882000" />
+      <workItem from="1574960216032" duration="5260000" />
+      <workItem from="1574978948069" duration="994000" />
+      <workItem from="1575038384797" duration="5589000" />
+      <workItem from="1575045927226" duration="8604000" />
+      <workItem from="1575114998959" duration="2799000" />
+      <workItem from="1575143628593" duration="1997000" />
+      <workItem from="1575199826246" duration="2899000" />
+      <workItem from="1576070403791" duration="102000" />
+      <workItem from="1576107044755" duration="1725000" />
+      <workItem from="1576109779185" duration="1887000" />
+    </task>
+    <task id="LOCAL-00001" summary="Make projects with redux">
+      <created>1575040989626</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575040989626</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Make static api output">
+      <created>1575046052310</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575046052310</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Make last fixes, and make simple css style.">
+      <created>1575202704112</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575202704112</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Make projects with redux" />
+    <MESSAGE value="Make static api output" />
+    <MESSAGE value="Make last fixes, and make simple css style." />
+    <option name="LAST_COMMIT_MESSAGE" value="Make last fixes, and make simple css style." />
   </component>
 </project>

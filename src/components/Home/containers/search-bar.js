@@ -1,10 +1,6 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from "redux";
-import {fetchData, dataRequested} from '../../../redux/actions';
+import React from 'react';
 
-class SearchBar extends Component {
-  render() {
+const SearchBar = ({fetchData}) =>  {
     let search;
     return (
         <div className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -13,8 +9,7 @@ class SearchBar extends Component {
             if (!search.value.trim()) {
               return null;
             }
-            this.props.dataRequested();
-            this.props.fetchData(search.value);
+            fetchData(search.value);
             search.value = '';
           }}>
             <input className="form-control mr-sm-2" type="text" placeholder="Search" ref={(node) => search = node}/>
@@ -22,11 +17,6 @@ class SearchBar extends Component {
           </form>
         </div>
     )
-  }
-}
+  };
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({fetchData, dataRequested}, dispatch);
-}
-
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default SearchBar;

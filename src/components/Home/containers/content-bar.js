@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 
 import Spinner from './spinner';
 import ContentItem from './content-bar-item';
@@ -30,25 +29,18 @@ const DataList = ({data}) => {
   );
 };
 
-class DataListContainer extends Component {
+export default class DataListContainer extends Component {
 
   render() {
-    const {data, loading, error, query} = this.props;
+    const {data, loading, error} = this.props;
 
     if (loading) {
       return <Spinner/>;
     }
 
     if (error) {
-      return <ErrorIndicator query={query}/>;
+      return <ErrorIndicator/>;
     }
     return <DataList data={data}/>;
   }
 }
-
-const mapStateToProps = ({dataList: {data, loading, error, query}}) => {
-  return {data, loading, error, query};
-};
-
-
-export default connect(mapStateToProps)(DataListContainer);
